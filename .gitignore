@@ -1,0 +1,6 @@
+*.o
+*.diff
+*.orig
+*.rej
+dwm.png
+dwm

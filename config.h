@@ -2,10 +2,12 @@
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int gappx     = 6;        /* gaps between windows */
+static const unsigned int gappx     = 4;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
+static const int vertpad            = 4;       /* vertical padding of bar */
+static const int sidepad            = 4;       /* horizontal padding of bar */
 static const char *fonts[]          = { "Fira Mono Medium:size=14" };
 static const char dmenufont[]       = "Fira Mono Medium:size=11";
 static const char col_gray1[]       = "#282828";
@@ -21,7 +23,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "壱", "弐", "参", "肆", "伍", "陸", "漆", "八", "玖" };
+static const char *tags[] = { "壱", "弐", "参", "肆", "伍", "陸", "漆", "捌", "玖" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -88,7 +90,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_r,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
-	{ MODKEY,                       XK_s,      togglesticky,   {0} },
+	{ MODKEY|ShiftMask,             XK_s,      togglesticky,   {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
